@@ -153,7 +153,7 @@ function loadData(){
     }
 }
 
-// 0-1, 1-3
+
 function mergeTime(arr1, arr2) {
     let result = [];
     let i = 0;
