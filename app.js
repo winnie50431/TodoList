@@ -160,14 +160,14 @@ function mergeTime(arr1, arr2) {
     let j = 0;
     
     while ( i< arr1.length && j < arr2.length){
-        if (Number(arr1[i].todoMonth) > Number(arr2[j].todoMonth)){
-            result.push(arr2[j]);
-            j++;
-        } else if ( Number(arr1[i].todoMonth) < Number(arr2[j].todoMonth)){
+        if (Number(arr1[i].todoMonth) < Number(arr2[j].todoMonth)){
             result.push(arr1[i]);
             i++;
+        } else if (Number(arr1[i].todoMonth) > Number(arr2[j].todoMonth)){
+            result.push(arr2[j]);
+            j++;
         } else if (Number(arr1[i].todoMonth) == Number(arr2[j].todoMonth)){
-            if ( Number(arr1[i].todoDate) < Number(arr2.todoDate) ){
+            if (Number(arr1[i].todoDate) < Number(arr2[j].todoDate) ){
                 result.push(arr1[i]);
                 i++;
             } else {
